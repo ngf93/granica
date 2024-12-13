@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.min.css">
+    <title>39 граница - страница пропуска</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="/" class="logo"><img src="imgs/logo.svg" alt="39 граница"></a>
+            <div class="menu">
+                <nav id="menu">
+                    <ul>
+                        <li><a href="page.html">Пункты пропуска</a></li>
+                        <li><a href="/">Новости</a></li>
+                        <li><a href="/">Группы в Telegram</a></li>
+                    </ul>
+                    <button type="button" class="close" onclick="closeMenu('menu')">
+                        <img src="imgs/icons/close.svg" alt="close">
+                    </button>
+                </nav>
+                <button class="open" type="button" onclick="openMenu('menu')">
+                    <img src="imgs/icons/menu.svg" alt="menu">
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="not-found mt-lg mb-lg">
+            <h2>Страница не найдена</h2>
+            <div class="num">404</div>
+            <p>УУпсс похоже, что данной страницы нету. Если вам все еще требуется <br>помощь, то начните просмотр с начала</p>
+            <button type="button" class="btn-primary mt-sm w-100-mob">Вернуться на главную</button>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <a href="/" class="logo"><img src="imgs/logo.svg" alt="39 граница"></a>
+            <nav>
+                <ul>
+                    <li><a href="page.html">Пункты пропуска</a></li>
+                    <li><a href="/">Новости</a></li>
+                    <li><a href="/">Группы в Telegram</a></li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

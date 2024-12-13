@@ -5,6 +5,10 @@ function closeMenu(id){
     document.getElementById(id).classList.remove('visible');
 }
 
+function toggleDropdown(btn){
+    btn.nextElementSibling.classList.toggle('show');
+}
+
 // document.addEventListener("load", ready);
 // function ready() {
 //     let iframeArr = Array.from(document.querySelectorAll('.news-list iframe'));

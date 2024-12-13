@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.min.css">
+    <title>39 граница - страница пропуска</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="/" class="logo"><img src="imgs/logo.svg" alt="39 граница"></a>
+            <div class="menu">
+                <nav id="menu">
+                    <ul>
+                        <li><a href="page.html">Пункты пропуска</a></li>
+                        <li><a href="/">Новости</a></li>
+                        <li><a href="/">Группы в Telegram</a></li>
+                    </ul>
+                    <button type="button" class="close" onclick="closeMenu('menu')">
+                        <img src="imgs/icons/close.svg" alt="close">
+                    </button>
+                </nav>
+                <button class="open" type="button" onclick="openMenu('menu')">
+                    <img src="imgs/icons/menu.svg" alt="menu">
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <nav class="breadcrumbs">
+            <ul>
+                <li><a href="/">Главная страница</a></li>
+                <li><a href="page.html">Гусев - Голдап</a></li>
+            </ul>
+        </nav>
+
+        <section class="checkpoint-page mt-mid mb-lg">
+            <div class="d-flex gap bp-tablet mb-md">
+                <div class="col-60">
+                    <h2>Онлайн веб камера Гусев-Голдап</h2>
+                    <p class="mb-sm">Какой то текст</p>
+                    <div class="d-flex gap">
+                        <button type="button" class="btn-secondary active">Источник 1</button>
+                        <button type="button" class="btn-secondary">Источник 2</button>
+                    </div>
+                </div>
+                <div class="col-40">
+                    <div class="dropdown">
+                        <button type="button" class="dropdown__btn" onclick="toggleDropdown(this)">
+                            <img src="imgs/flags/ru.png">
+                            <span>Гусев – Голдан</span>
+                            <img src="imgs/flags/pl.png">
+                        </button>
+                        <div class="dropdown__box">
+                            <ul class="list">
+                                <li>
+                                    <img src="imgs/icons/stop.png" alt="stop">
+                                    <span>Гусев – Голдап</span>
+                                </li>
+                                <li>
+                                    <img src="imgs/icons/mark.png" alt="mark">
+                                    <span>Багратионовск – Безледы</span>
+                                    <img src="imgs/icons/car.png" alt="car">
+                                </li>
+                                <li>
+                                    <img src="imgs/icons/mark.png" alt="mark">
+                                    <span>Мамоново – 2 –  Гжехотки</span>
+                                    <img src="imgs/icons/car.png" alt="car">
+                                </li>
+                                <li>
+                                    <img src="imgs/icons/stop.png" alt="stop">
+                                    <span>Мамоново – 1 – Гроново</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <video controls src="imgs/1111708_Eco_Drive_1280x720.mp4"></video>
+        </section>
+
+        <section class="content mb-lg">
+            <div class="d-flex y-cen gap bp-tablet mb-sm">
+                <div class="col-60">
+                    <h2>Ситуация на границе за последние сутки</h2>
+                </div>
+                <div class="col-40">
+                    <ul class="pagination desk">
+                        <li>
+                            <button type="button">
+                                <img src="imgs/icons/arrow-left.svg" alt="arrow-left">
+                            </button>
+                        </li>
+                        <li>
+                            <!-- Тэг 'a' можно поменять на 'button' -->
+                            <a href="/" class="active">1</a>
+                        </li>
+                        <li>
+                            <a href="/">2</a>
+                        </li>
+                        <li>
+                            ...
+                        </li>
+                        <li>
+                            <a href="/">30</a>
+                        </li>
+                        <li>
+                            <button type="button">
+                                <img src="imgs/icons/arrow-right.svg" alt="arrow-right">
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="d-flex wrap y-cen gap bp-tablet">
+                <div class="col-33">
+                    <img src="imgs/image5.jpg" alt="image5" class="mediaContent">
+                    <p class="mt-xs">1 мин. назад</p>
+                </div>
+                <div class="col-33">
+                    <img src="imgs/image5.jpg" alt="image5" class="mediaContent">
+                    <p class="mt-xs">1 мин. назад</p>
+                </div>
+                <div class="col-33">
+                    <img src="imgs/image5.jpg" alt="image5" class="mediaContent">
+                    <p class="mt-xs">1 мин. назад</p>
+                </div>
+                <div class="col-33">
+                    <img src="imgs/image5.jpg" alt="image5" class="mediaContent">
+                    <p class="mt-xs">1 мин. назад</p>
+                </div>
+                <div class="col-33">
+                    <img src="imgs/image5.jpg" alt="image5" class="mediaContent">
+                    <p class="mt-xs">1 мин. назад</p>
+                </div>
+                <div class="col-33">
+                    <img src="imgs/image5.jpg" alt="image5" class="mediaContent">
+                    <p class="mt-xs">1 мин. назад</p>
+                </div>
+            </div>
+
+            <ul class="pagination tablet">
+                <li>
+                    <button type="button">
+                        <img src="imgs/icons/arrow-left.svg" alt="arrow-left">
+                    </button>
+                </li>
+                <li>
+                    <!-- Тэг 'a' можно поменять на 'button' -->
+                    <a href="/" class="active">1</a>
+                </li>
+                <li>
+                    <a href="/">2</a>
+                </li>
+                <li>
+                    ...
+                </li>
+                <li>
+                    <a href="/">30</a>
+                </li>
+                <li>
+                    <button type="button">
+                        <img src="imgs/icons/arrow-right.svg" alt="arrow-right">
+                    </button>
+                </li>
+            </ul>
+        </section>
+
+        <section class="about d-flex y-cen gap bp-tablet mb-lg">
+            <div class="col-66">
+                <div class="about__text">
+                    <h2>Гусев - Голдап</h2>
+                    <p>Противоположная точка зрения подразумевает, что интерактивные прототипы рассмотрены исключительно в разрезе маркетинговых и финансовых предпосылок. Как принято считать, независимые государства объявлены нарушающими общечеловеческие нормы этики и морали.</p>
+                </div>
+            </div>
+            <div class="col-33">
+                <div class="about__grid">
+                    <div class="box">
+                        <p>Открыт только для пешеходов <strong>(круглосуточно)</strong></p>
+                        <p>Режим работы: <strong>Пн-Вс 06:00-20:00</strong></p>
+                    </div>
+                    <button type="button" class="btn-secondary">
+                        <img src="imgs/icons/Yandex_icon.svg" alt="Yandex">
+                        <span>Яндекс карта</span>
+                    </button>
+                    <button type="button" class="btn-secondary">
+                        <img src="imgs/icons/google_icon.svg" alt="google">
+                        <span>Google карта</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-lg">
+            <h2>Статистика пункта пропуска</h2>
+        </section>
+
+        <section class="news d-flex gap bp-tablet mb-lg">
+            <div class="col-60">
+                <h2 class="mb-sm">Новости</h2>
+                <ul class="list news-list">
+                    <li>
+                        <script async src="https://telegram.org/js/telegram-widget.js?22" data-telegram-post="granica_39_news/122" data-width="100%" data-userpic="true"></script>
+                    </li>
+                    <li>
+                        <script async src="https://telegram.org/js/telegram-widget.js?22" data-telegram-post="granica_39_news/121" data-width="100%" data-userpic="true"></script>
+                    </li>
+                    <li>
+                        <script async src="https://telegram.org/js/telegram-widget.js?22" data-telegram-post="granica_39_news/120" data-width="100%" data-userpic="true"></script>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-40">
+                <h2 class="mb-sm">Группы в Telegram</h2>
+                <ul class="list-box">
+                    <li>
+                        <a class="t-channel" href="https://t.me/granica_39_news">
+                            <img src="imgs/granica_39_chat.png" alt="granica_39_news">
+                            <div>
+                                <h3 class="mb-xs">Приграничная болталка</h3>
+                                <p class="gray">@granica_39_news</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="t-channel" href="https://t.me/granica_39_chat">
+                            <img src="imgs/granica_39_board.png" alt="granica_39_chat">
+                            <div>
+                                <h3 class="mb-xs">Объявления, поиска попутчиков </h3>
+                                <p class="gray">@granica_39_chat</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="t-channel" href="https://t.me/granica_39_news">
+                            <img src="imgs/granica_39.png" alt="granica_39_news">
+                            <div>
+                                <h3 class="mb-xs">Канал 39 граница - FAQ, новости, справка</h3>
+                                <p class="gray">@granica_39_news</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="t-channel" href="https://t.me/granica_blr">
+                            <img src="imgs/stop-control.png" alt="granica_blr">
+                            <div>
+                                <h3 class="mb-xs">Калининградский транзит, границы Белоруссии, УТД, УПД-ЖД</h3>
+                                <p class="gray">@granica_blr</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="t-channel" href="https://t.me/granica_39_news">
+                            <img src="imgs/stop-control.png" alt="granica_39_news">
+                            <div>
+                                <h3 class="mb-xs">Граница Калининград (Россия, Польша, Литва)</h3>
+                                <p class="gray">@granica_39_news</p>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="offers d-flex gap bp-tablet mb-lg">
+            <div class="col-50">
+                <div class="offers__item green">
+                    <picture class="offers__item-img">
+                        <source srcset="imgs/offer1mobile.png" media="(max-width: 720px)" />
+                        <img src="imgs/offer1.png" alt="offer1" />
+                    </picture>
+                    <div class="offers__item-text">
+                        <div class="offers__item-top">
+                            <div class="title">
+                                <p>Зеленая карта для России
+                                    <br>Страхование ( ОСАГО ) для иностранных авто
+                                </p>
+                            </div>
+                            <img src="imgs/polis.svg" alt="polis" class="offers__item-logo">
+                        </div>
+
+                        <ul class="list">
+                            <li>
+                                <img src="imgs/icons/phone.svg" alt="phone">
+                                <a href="tel:+7 969 999-57-42">+7 969 999-57-42</a>
+                            </li>
+                            <li>
+                                <img src="imgs/icons/tg.svg" alt="tg">
+                                <a href="https://t.me/strahovka39_bot">@strahovka39_bot</a>
+                            </li>
+                            <li>
+                                <img src="imgs/icons/globe.svg" alt="globe">
+                                <a href="https://polis-kaliningrad.ru/">polis-kaliningrad.ru</a>
+                            </li>
+                        </ul>
+                        
+                        <button type="button" class="offers__item-btn">C нами надежно!</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-50">
+                <div class="offers__item">
+                    <picture class="offers__item-img">
+                        <source srcset="imgs/offer2mobile.png" media="(max-width: 720px)" />
+                        <img src="imgs/offer2.png" alt="offer1" />
+                    </picture>
+                    <div class="offers__item-text">
+                        <div class="offers__item-top">
+                            <div class="title">
+                                <img src="imgs/icons/plane.svg" alt="plane" >
+                                <p>Долгосрочная <br>парковка у аэропорта
+                                </p>
+                            </div>
+                            <img src="imgs/europarking.svg" alt="europarking" class="offers__item-logo">
+                        </div>
+
+                        <ul class="list">
+                            <li>
+                                <img src="imgs/icons/phone.svg" alt="phone">
+                                <a href="tel:+7 995 222-59-39">+7 995 222-59-39</a>
+                            </li>
+                            <li>
+                                <img src="imgs/icons/pin.svg" alt="pin">
+                                <address>г.Калининград, ул.А.Невского,д.122</address>
+                            </li>
+                            <li>
+                                <img src="imgs/icons/globe.svg" alt="globe">
+                                <a href="https://europarking39.ru/">europarking39.ru</a>
+                            </li>
+                        </ul>
+                        
+                        <button type="button" class="offers__item-btn">Бронирование мест - онлайн</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <a href="/" class="logo"><img src="imgs/logo.svg" alt="39 граница"></a>
+            <nav>
+                <ul>
+                    <li><a href="page.html">Пункты пропуска</a></li>
+                    <li><a href="/">Новости</a></li>
+                    <li><a href="/">Группы в Telegram</a></li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
