@@ -591,6 +591,40 @@ main {
     }
 }
 
+.statistics {
+    &__top {
+        margin-top: var(--margin-mid);
+        @include flex(row, flex-start, flex-start, nowrap);
+        gap: var(--margin-mid);
+    }
+    &__indicators {
+        margin-top: var(--margin-mid);
+        margin-bottom: var(--margin-mid);
+        @include flex(row, space-between, stretch, nowrap);
+        li {
+            @include flex();
+            gap: var(--margin-xs);
+            
+            span {
+                flex: 1;
+            }
+            &:first-child {
+                padding-right: var(--margin-sm);
+            }
+            &:last-child {
+                padding-left: var(--margin-sm);
+            }
+            &:not(:first-child, :last-child) {
+                padding-left: var(--margin-sm);
+                padding-right: var(--margin-sm);
+            }
+            &:not(:first-child) {
+                border-left: 1px solid var(--light-color);
+            }
+        }
+    }
+}
+
 .offers {
     &__item {
         overflow: hidden;

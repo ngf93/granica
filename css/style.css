@@ -658,6 +658,49 @@ main {
   }
 }
 
+.statistics__top {
+  margin-top: var(--margin-mid);
+  display: flex !important;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  gap: var(--margin-mid);
+}
+.statistics__indicators {
+  margin-top: var(--margin-mid);
+  margin-bottom: var(--margin-mid);
+  display: flex !important;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
+  flex-wrap: nowrap;
+}
+.statistics__indicators li {
+  display: flex !important;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: var(--margin-xs);
+}
+.statistics__indicators li span {
+  flex: 1;
+}
+.statistics__indicators li:first-child {
+  padding-right: var(--margin-sm);
+}
+.statistics__indicators li:last-child {
+  padding-left: var(--margin-sm);
+}
+.statistics__indicators li:not(:first-child, :last-child) {
+  padding-left: var(--margin-sm);
+  padding-right: var(--margin-sm);
+}
+.statistics__indicators li:not(:first-child) {
+  border-left: 1px solid var(--light-color);
+}
+
 .offers__item {
   overflow: hidden;
   -webkit-backface-visibility: hidden;

@@ -194,8 +194,53 @@
             </div>
         </section>
 
-        <section class="mb-lg">
+        <section class="statistics mb-lg">
             <h2>Статистика пункта пропуска</h2>
+            <div class="statistics__top">
+                <div>
+                    <h3 class="mb-gap">Выберите период агрегации:</h3>
+                    <div class="d-flex gap">
+                        <button type="button" class="btn-secondary active">1 день</button>
+                        <button type="button" class="btn-secondary">7 дней</button>
+                        <button type="button" class="btn-secondary">месяц</button>
+                        <button type="button" class="btn-secondary">год</button>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="mb-gap">Выберите тип транспорта:</h3>
+                    <div class="d-flex gap">
+                        <button type="button" class="btn-secondary active">Легковые</button>
+                        <button type="button" class="btn-secondary">Грузовые</button>
+                    </div>
+                </div>
+            </div>
+            
+            <ul class="statistics__indicators">
+                <li>
+                    <svg width="23" height="24" viewBox="0 0 23 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="11.5" cy="12" r="11.5" fill="#1BDF11"/>
+                    </svg>                        
+                    <span>Количество оформленных выезд</span>
+                </li>
+                <li>
+                    <svg width="23" height="24" viewBox="0 0 23 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="11.5" cy="12" r="11.5" fill="#DF9711"/>
+                    </svg>                                             
+                    <span>Количество оформленных выезд</span>
+                </li>
+                <li>
+                    <svg width="23" height="24" viewBox="0 0 23 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="11.5" cy="12" r="11.5" fill="#6711DF"/>
+                    </svg>                                                
+                    <span>Среднее количество АТС перед пунктом пропуска въезд</span>
+                </li>
+                <li>
+                    <svg width="23" height="24" viewBox="0 0 23 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="11.5" cy="12" r="11.5" fill="#11AADF"/>
+                    </svg>                                               
+                    <span>Среднее количество АТС перед пунктом пропуска въезд</span>
+                </li>
+            </ul>
         </section>
 
         <section class="news d-flex gap bp-tablet mb-lg">
