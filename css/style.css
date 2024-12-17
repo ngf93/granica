@@ -123,7 +123,7 @@ button {
   color: var(--bg-color);
 }
 
-h2 {
+h1, h2 {
   font-size: var(--font-size-xl);
   font-weight: 700;
   text-align: left;
@@ -499,7 +499,7 @@ main {
   }
 }
 
-.checkpoint-page h2 {
+.checkpoint-page h1 {
   margin-bottom: var(--gap);
 }
 .checkpoint-page video {
@@ -547,6 +547,7 @@ main {
   outline: 1px solid var(--light-color);
   border-radius: var(--radius);
   padding: calc(var(--gap) * 2);
+  align-items: stretch;
 }
 .news .list li {
   width: 100%;
@@ -562,6 +563,12 @@ main {
   .news .list li iframe {
     transform: scaleX(0.95) translateX(-5%);
   }
+}
+.news .sticky {
+  position: sticky;
+  top: 0px;
+  right: 0px;
+  width: 100%;
 }
 @media (min-width: 1501px) {
   .news .news-list {

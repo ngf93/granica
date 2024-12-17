@@ -123,7 +123,7 @@ button {
     }
 }
 
-h2 {
+h1, h2 {
     font-size: var(--font-size-xl);
     font-weight: 700;
     text-align: left;
@@ -463,7 +463,7 @@ main {
     }
 }
 .checkpoint-page {
-    h2 {
+    h1 {
         margin-bottom: var(--gap);
     }
 
@@ -506,6 +506,7 @@ main {
     outline: 1px solid var(--light-color);
     border-radius: var(--radius);
     padding: calc(var(--gap)*2);
+    align-items: stretch;
     .list {
         li {
             width: 100%;
@@ -521,6 +522,12 @@ main {
                 }
             }
         }
+    }
+    .sticky {
+        position: sticky;
+        top: 0px;
+        right: 0px;
+        width: 100%;
     }
 
     @media (min-width: 1501px) {
