@@ -474,6 +474,18 @@ main {
         overflow: hidden;
         @include safariFix();
     }
+
+    .col-60 {
+        .d-flex {
+            @media (max-width: 720px) {
+                width: 100%;
+                gap: 10px;
+                button {
+                    width: 50%;
+                }
+            }
+        }
+    }
 }
 
 .content {
