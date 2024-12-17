@@ -894,6 +894,7 @@ header {
         @media (max-width: 1024px) {
             display: none;
             position: fixed;
+            z-index: 1000;
             top: 1em;
             right: 1em;
             width: calc(100% - 2em);

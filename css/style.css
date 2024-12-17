@@ -1057,6 +1057,7 @@ header nav {
   header nav {
     display: none;
     position: fixed;
+    z-index: 1000;
     top: 1em;
     right: 1em;
     width: calc(100% - 2em);
