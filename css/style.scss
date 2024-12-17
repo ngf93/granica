@@ -68,7 +68,10 @@
     box-sizing: border-box;
     line-height: 125%;
 }
-address {display: inline;}
+address {
+    display: inline;
+    font-style: normal;
+}
 ul, ol {
     @include list();
 }
@@ -108,6 +111,9 @@ button {
     border-radius: var(--radius);
     border: 1px solid var(--light-color);
     transition: border-color var(--transition);
+    @media (max-width: 720px) {
+        padding: 1em 1.2em;
+    }
     &:hover, &:focus {
         border-color: var(--main-color);
     }
@@ -435,6 +441,9 @@ main {
             padding: calc(var(--gap)*1.5) var(--gap);
             .d-flex.gap {
                 --gap: 10px;
+                @media (max-width: 720px) {
+                    --gap: 30px;
+                }
                 .list {
                     --gap: 20px;
                 }
@@ -444,6 +453,12 @@ main {
         iframe {
             height: 100%;
             min-height: 350px;
+        }
+    }
+
+    .list {
+        @media (max-width: 1500px) {
+            --font-size-sm: 12px;
         }
     }
 }
@@ -596,31 +611,96 @@ main {
         margin-top: var(--margin-mid);
         @include flex(row, flex-start, flex-start, nowrap);
         gap: var(--margin-mid);
+        @media (max-width: 1024px) {
+            flex-direction: column;
+        }
+        @media (max-width: 720px) {
+            --gap: 10px;
+            margin-top: var(--margin);
+            gap: var(--margin-sm);
+        }
     }
-    &__indicators {
+    &__controls {
         margin-top: var(--margin-mid);
-        margin-bottom: var(--margin-mid);
-        @include flex(row, space-between, stretch, nowrap);
-        li {
-            @include flex();
-            gap: var(--margin-xs);
-            
-            span {
-                flex: 1;
+        @media (max-width: 720px) {
+            margin-top: var(--margin);
+        }
+        ul {
+            @include list();
+            @include flex(row, space-between, center, nowrap);
+            @media (max-width: 1500px) {
+                font-size: 13px;
             }
-            &:first-child {
-                padding-right: var(--margin-sm);
+            @media (max-width: 1024px) {
+                @include flex(column, flex-start, flex-start, nowrap);
             }
-            &:last-child {
-                padding-left: var(--margin-sm);
+            li {
+                --padding: --margin-sm;
+                opacity: 1;
+                transition: opacity var(--transition);
+                cursor: pointer;
+                @include flex(row, flex-start, center, nowrap);
+                gap: var(--margin-xs);
+                &:first-child {
+                    padding-right: var(--padding);
+                    @media (max-width: 1024px) {
+                        padding-right: 0px;
+                    }
+                }
+                &:not(:first-child, :last-child) {
+                    padding: 0px var(--padding);
+                    @media (max-width: 1024px) {
+                        padding: 0px;
+                    }
+                }
+                &:last-child {
+                    padding-left: var(--padding);
+                    @media (max-width: 1024px) {
+                        padding-left: 0px;
+                    }
+                }
+                &:not(:first-child){
+                    border-left: 1px solid var(--light-color);
+                    @media (max-width: 1024px) {
+                        border-left: unset;
+                        margin-top: var(--gap);
+                    }
+                }
+                span {
+                    width: 23px;
+                    height: 23px;
+                    border-radius: 50%;
+                    @media (max-width: 1500px) {
+                        width: 20px;
+                        height: 20px;
+                    }
+                }
+                p {
+                    flex: 1;
+                }
+
+                &.excluded {
+                    opacity: 0.5;
+                }
+
+                @media (max-width: 1500px) {
+                    --padding: 15px;
+                }
             }
-            &:not(:first-child, :last-child) {
-                padding-left: var(--margin-sm);
-                padding-right: var(--margin-sm);
-            }
-            &:not(:first-child) {
-                border-left: 1px solid var(--light-color);
-            }
+        }
+    }
+    &__chart{
+        margin-top: var(--margin-mid);
+        border: 1px solid var(--light-color);
+        border-radius: calc(var(--radius)*2);
+        padding: var(--margin-sm) var(--margin);
+        @media (max-width: 1024px) {
+            padding: var(--gap);
+            border-radius: var(--radius);
+        }
+        @media (max-width: 720px) {
+            padding: 5px;
+            margin-top: var(--margin);
         }
     }
 }
@@ -645,8 +725,10 @@ main {
         }
 
         @media (max-width: 720px) {
+            --font-size-sm: 12px;
             height: fit-content;
             padding: var(--gap);
+            border-radius: var(--radius);
         }
 
         &-img {
@@ -678,10 +760,15 @@ main {
                 font-weight: 600;
                 @media (max-width: 720px) {
                     gap: 10px;
+                    width: 80%;
                 }
                 li {
+                    @include flex(row, flex-start, center, nowrap);
                     img {
                         margin-right: calc(var(--margin-xs)*1.5);
+                    }
+                    a, span, address {
+                        flex: 1;
                     }
                 }
             }
@@ -719,6 +806,9 @@ main {
             border: 1px solid currentColor;
             padding: var(--font-size);
             border-radius: calc(var(--gap)*2.5);
+            @media (max-width: 720px) {
+                font-size: var(--font-size);
+            }
         }
     }
 }
