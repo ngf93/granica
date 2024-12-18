@@ -412,6 +412,19 @@ h3 {
     }
 }
 
+.d-mobile {
+    display: none;
+    @media (max-width: 1024px) {
+        display: block;
+    }
+}
+.d-desktop {
+    display: block;
+    @media (max-width: 1024px) {
+        display: none;
+    }
+}
+
 
 body {
     font-size: var(--font-size);
@@ -460,6 +473,9 @@ main {
         @media (max-width: 1500px) {
             --font-size-sm: 12px;
         }
+        @media (max-width: 1024px) {
+            --font-size-sm: 14px;
+        }
     }
 }
 .checkpoint-page {
@@ -477,7 +493,7 @@ main {
 
     .col-60 {
         .d-flex {
-            @media (max-width: 720px) {
+            @media (max-width: 1024px) {
                 width: 100%;
                 gap: 10px;
                 button {
@@ -519,22 +535,38 @@ main {
     border-radius: var(--radius);
     padding: calc(var(--gap)*2);
     align-items: stretch;
+
+    &__header {
+        @include flex(row, flex-start, center, nowrap);
+        img {
+            display: none;
+            @media (max-width: 1024px) {
+                display: block;
+                width: 34px;
+                height: 34px;
+                object-fit: scale-down;
+                margin-right: var(--margin-xs);
+            }
+        }
+    }
+
     .list {
         li {
             width: 100%;
+            @media (max-width: 1024px) {
+                overflow: hidden;
+            }
             iframe {
                 display: block;
                 width: 100%;
-                body.body_widget_post {
-                    max-width: 100% !important;
-                }
-
-                @media (max-width: 720px) {
-                    transform: scaleX(.95) translateX(-5%);
+                @media (max-width: 1024px) {
+                    max-width: 500px;
+                    transform: translateX(-36px);
                 }
             }
         }
     }
+
     .sticky {
         position: sticky;
         top: 0px;
