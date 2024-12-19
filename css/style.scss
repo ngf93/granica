@@ -453,6 +453,8 @@ main {
     &>.col-50 {
         border-radius: var(--radius);
         outline: 1px solid var(--light-color);
+        overflow: hidden;
+        @include safariFix();
         &:first-child {
             padding: calc(var(--gap)*1.5) var(--gap);
             .d-flex.gap {

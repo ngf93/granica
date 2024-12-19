@@ -499,6 +499,11 @@ main {
 .checkpoints > .col-50 {
   border-radius: var(--radius);
   outline: 1px solid var(--light-color);
+  overflow: hidden;
+  -webkit-backface-visibility: hidden;
+  -webkit-transform: translate3d(0, 0, 0);
+  isolation: isolate;
+  transform: translateZ(0);
 }
 .checkpoints > .col-50:first-child {
   padding: calc(var(--gap) * 1.5) var(--gap);
