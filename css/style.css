@@ -274,6 +274,13 @@ h3 {
 .list li {
   display: block;
 }
+.list li a {
+  display: flex !important;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
+}
 .list li span {
   flex: 1;
   margin: 0px var(--margin-xs);
@@ -507,19 +514,30 @@ main {
 .checkpoints > .col-50:first-child .d-flex.gap .list {
   --gap: 20px;
 }
-.checkpoints > .col-50 iframe {
-  height: 100%;
-  min-height: 350px;
-}
 @media (max-width: 1500px) {
-  .checkpoints .list {
-    --font-size-sm: 12px;
+  .checkpoints > .col-50:first-child {
+    width: calc(62% - var(--gap) / 2);
+    padding: var(--gap) var(--margin-xs);
   }
 }
 @media (max-width: 1024px) {
-  .checkpoints .list {
-    --font-size-sm: 14px;
+  .checkpoints > .col-50:first-child {
+    width: 100%;
   }
+}
+@media (max-width: 1500px) {
+  .checkpoints > .col-50:last-child {
+    width: calc(38% - var(--gap) / 2);
+  }
+}
+@media (max-width: 1024px) {
+  .checkpoints > .col-50:last-child {
+    width: 100%;
+  }
+}
+.checkpoints > .col-50 iframe {
+  height: 100%;
+  min-height: 350px;
 }
 
 .checkpoint-page h1 {
@@ -942,6 +960,16 @@ main {
 }
 .offers__item-text .list {
   font-weight: 600;
+}
+@media (max-width: 1500px) {
+  .offers__item-text .list {
+    width: 60%;
+  }
+}
+@media (max-width: 1024px) {
+  .offers__item-text .list {
+    width: 60%;
+  }
 }
 @media (max-width: 720px) {
   .offers__item-text .list {

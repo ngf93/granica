@@ -265,6 +265,9 @@ h3 {
     gap: var(--gap);
     li {
         display: block;
+        a {
+            @include flex(row, flex-start, center, nowrap);
+        }
         span {
             flex:1;
             margin: 0px var(--margin-xs);
@@ -461,6 +464,22 @@ main {
                     --gap: 20px;
                 }
             }
+
+            @media (max-width: 1500px) {
+                width: calc(62% - var(--gap)/2);
+                padding: var(--gap) var(--margin-xs);
+            }
+            @media (max-width: 1024px) {
+                width: 100%;
+            }
+        }
+        &:last-child {
+            @media (max-width: 1500px) {
+                width: calc(38% - var(--gap)/2);
+            }
+            @media (max-width: 1024px) {
+                width: 100%;
+            }
         }
 
         iframe {
@@ -469,14 +488,9 @@ main {
         }
     }
 
-    .list {
-        @media (max-width: 1500px) {
-            --font-size-sm: 12px;
-        }
-        @media (max-width: 1024px) {
-            --font-size-sm: 14px;
-        }
-    }
+    // .list {
+
+    // }
 }
 .checkpoint-page {
     h1 {
@@ -809,6 +823,12 @@ main {
             }
             .list {
                 font-weight: 600;
+                @media (max-width: 1500px) {
+                    width: 60%;
+                }
+                @media (max-width: 1024px) {
+                    width: 60%;
+                }
                 @media (max-width: 720px) {
                     gap: 10px;
                     width: 80%;
